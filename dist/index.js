@@ -230,8 +230,9 @@ class WebtorGenerator {
     if (dd.height) iframe.height = dd.height;
     iframe.setAttribute('allowFullScreen', '');
     iframe.setAttribute('webkitAllowFullScreen', '');
-    iframe.setAttribute('mozAllowFullScreen', '');
-    iframe.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin');
+    iframe.setAttribute('mozAllowFullScreen', ''); // disabling ads
+
+    iframe.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin allow-presentation');
     iframe.setAttribute('target', '_top');
     iframe.scrolling = 'no';
     iframe.frameBorder = '0';
